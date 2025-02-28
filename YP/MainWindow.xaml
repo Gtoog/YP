@@ -8,13 +8,20 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBox HorizontalAlignment="Left" Margin="10,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="txtFullName"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="67,176,0,0" VerticalAlignment="Top" Click="btnAddStudent_Click"/>
+        <Button Content="Добавить студента" HorizontalAlignment="Left" Margin="32,181,0,0" VerticalAlignment="Top" Click="btnAddStudent_Click"/>
         <DatePicker HorizontalAlignment="Left" Margin="150,145,0,0" VerticalAlignment="Top" Height="33" Width="100" Name="dtpBirthDate"/>
         <ListBox x:Name="listBoxStudents" Margin="0,0,476,329"/>
-        <Button Content="УДАЛИТЬ" HorizontalAlignment="Left" Margin="150,186,0,0" VerticalAlignment="Top" Click="btnDeleteStudent_Click"/>
+        <Button Content="УДАЛИТЬ" HorizontalAlignment="Left" Margin="152,181,0,0" VerticalAlignment="Top" Click="btnDeleteStudent_Click"/>
         <ListBox x:Name="listBoxSearchResults" Margin="0,217,497,124"/>
         <TextBox HorizontalAlignment="Left" Margin="32,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="txtSearch"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="179,326,0,0" VerticalAlignment="Top" Click="btnSearch_Click"/>
-
+        <Button Content="Поиск" HorizontalAlignment="Left" Margin="179,326,0,0" VerticalAlignment="Top" Click="btnSearch_Click"/>
+        <ListBox x:Name="listBoxCourses" Margin="344,0,307,329"></ListBox>
+        <Button Content="Найти курс студента" Margin="356,110,318,272" Click="LoadStudentCourses"></Button>
+        <Button Click="btnEnroll_Click" Content="добавить студента на курс" Margin="524,110,111,272"></Button>
+        <ListBox x:Name="allCourses" Margin="510,0,141,329"></ListBox>
+        <DataGrid Name="dataGridCourses" Margin="547,191,10,145"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,153,0,0" x:Name="textBoxCourseName" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="создать курс" Click="ButtonAddCourse_Click" HorizontalAlignment="Left" Margin="379,174,0,0" VerticalAlignment="Top"/>
+        <Button Content="Доабвить студента и курс ему" Click ="AddStudentAndEnroll" Margin="307,264,258,106"></Button>
     </Grid>
 </Window>
